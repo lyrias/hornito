@@ -14,4 +14,6 @@ en cada modificacion que se trabaje crear nuevas ramas
 # agregar cambios
 git add . <br/> 
 git commit -m "que cambios realizo" <br/>
-git push -u origin nombre_de_la_rama
+git push -u origin nombre_de_la_rama 
+# video de como configurar git
+https://www.youtube.com/watch?v=1RJHiHzUnk8
