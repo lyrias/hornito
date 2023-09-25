@@ -10,3 +10,8 @@ git checkout NOMBRE-RAMA
 # crear nueva rama
 git branch NOMBRE-NUEVA-RAMA
 en cada modificacion que se trabaje crear nuevas ramas
+# subir  cambios al repositorio
+# agregar cambios
+git add .
+git commit -m "que cambios realiazo"
+git push -u origin nombre_de_la_rama
