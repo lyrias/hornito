@@ -23,9 +23,9 @@
  <body>
     
       <div class="login">
-         <img src="assets/img/login-bg.png" alt="login image" class="login__img">
+         <img src="assets/img/login-bg.png"  alt="login image" class="login__img">
 
-         <form action="php/login_usuario_be.php" class="login__form">
+         <form action="php/login_usuario_be.php" method="post" class="login__form">
             <h1 class="login__title">Login</h1>
 
             <div class="login__content">
@@ -33,7 +33,7 @@
                   <i class="ri-user-3-line login__icon"></i>
 
                   <div class="login__box-input">
-                     <input type="text" required class="login__input" placeholder=" ">
+                     <input type="text" required class="login__input" placeholder=" " name="nombre">
                      <label for="" class="login__label">Usuario</label>
                   </div>
                </div>
@@ -42,7 +42,7 @@
                   <i class="ri-lock-2-line login__icon"></i>
 
                   <div class="login__box-input">
-                     <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                     <input type="password" required class="login__input" id="login-pass" placeholder=" " name="password">
                      <label for="" class="login__label">Contrasenia</label>
                      <i class="ri-eye-off-line login__eye" id="login-eye"></i>
                   </div>
