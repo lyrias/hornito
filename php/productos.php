@@ -77,7 +77,11 @@
 								<td><?=$value['nombre'];?></td>
 								<td><?=$value['precio']." Bs.";?></td>
 								<td><?=$value['stock'];?></td>
-								<td><span class="status pending">Pending</span></td>
+								<td>
+									<a href="?id=<?php echo $data['id_producto']; ?>" class="btn btn-primary"><i class='status completed'>Editar</i></a>
+									<a href="?id=<?php echo $data['id_producto']; ?>" class="btn btn-success"><i class='status pending'>Eliminar</i></a>
+
+								</td>
 							</tr>
 							<?php endforeach;?>
 						</tbody>

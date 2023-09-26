@@ -25,7 +25,7 @@ function usuarioExiste($correo){
 
 function obtenerUsuarioPorNombre($nombre){
     $base_de_datos = obtenerBaseDeDatos();
-    $sentencia = $base_de_datos->prepare("SELECT nombre,password,id_usuario FROM usuarios WHERE nombre = ? LIMIT 1;");
+    $sentencia = $base_de_datos->prepare("SELECT nombre,password,id_usuario,permisos FROM usuarios WHERE nombre = ? LIMIT 1;");
     $sentencia->execute([$nombre]);
     return $sentencia->fetchObject();
 }
@@ -43,6 +43,7 @@ function iniciarSesion($usuario){
     session_start();
     $_SESSION["id_usuario"] = $usuario->id_usuario;
     $_SESSION["nombre"] = $usuario->nombre;
+    $_SESSION["permisos"] = $usuario->permisos;
 }
 
 
