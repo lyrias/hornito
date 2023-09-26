@@ -1,12 +1,19 @@
 <?php
+function obtenerBaseDeDatos(){
 
-$conexion = mysqli_connect("localhost", "root", "", "hornito");
+    $nombre_base_de_datos = "hornito";
+    $usuario = "root";
+    $contrasenia = "";
+    try {
 
-/*
-if ($conexion){
-    echo "conectado";
-}else{
-        echo "no conectado";
+        $base_de_datos = new PDO('mysql:host=localhost;dbname=' . $nombre_base_de_datos, $usuario, $contrasenia);
+        $base_de_datos->query("set names utf8;");
+        $base_de_datos->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $base_de_datos->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        return $base_de_datos;
+    } catch (Exception $e) {
+        echo "Error obteniendo BD: " . $e->getMessage();
+        return null;
+    }
 }
-*/
-?>

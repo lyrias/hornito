@@ -29,6 +29,7 @@ li {
 	--light-yellow: #FFF2C6;
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
+	--green: #08a356;
 }
 
 html {
@@ -272,6 +273,7 @@ body {
 	align-items: center;
 }
 #content nav .profile img {
+	float:center;
 	width: 36px;
 	height: 36px;
 	object-fit: cover;
@@ -356,7 +358,18 @@ body {
 	font-weight: 500;
 }
 
-
+#content main .head-title .btn-new {
+	height: 36px;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--green);
+	color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+}
 
 
 #content main .box-info {
@@ -460,9 +473,9 @@ body {
 	padding-left: 6px;
 }
 #content main .table-data .order table td img {
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	border-radius: 20px;
 	object-fit: cover;
 }
 #content main .table-data .order table tbody tr:hover {
