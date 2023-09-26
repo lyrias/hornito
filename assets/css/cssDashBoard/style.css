@@ -460,11 +460,20 @@ body {
 	padding-left: 6px;
 }
 #content main .table-data .order table td img {
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	object-fit: cover;
+	width: 200px;
+	height: 200px;
 }
+#content main .table-data .order table td button {
+	border-radius: 36px 36px 36px 36px;
+	color: var(--light);
+	background: var(--blue);
+}
+#content main .table-data .order table td input {
+	border-radius: 150px;
+	color: var(--light);
+	background: var(--blue);
+}
+
 #content main .table-data .order table tbody tr:hover {
 	background: var(--grey);
 }

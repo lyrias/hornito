@@ -1,20 +1,3 @@
-<?php
-
-    session_start();
-
-    if(!isset($_SESSION['usuario'])){
-        echo '
-            <script>
-            alert("Debes de Iniciar Sesion");
-            window.location = "../index.php";
-            </script>
-        ';
-        session_destroy();
-        die();
-    }
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +13,8 @@
 </head>
 <body>
 
-
-	<!-- SIDEBAR -->
-	<section id="sidebar">
+<!-- SIDEBAR -->
+<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
 			<span class="text">AdminHub</span>
@@ -88,7 +70,6 @@
 	<!-- SIDEBAR -->
 
 
-
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
@@ -117,16 +98,7 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
+					<h1>Modulo Ventas</h1>
 				</div>
 				<a href="#" class="btn-download">
 					<i class='bx bxs-cloud-download' ></i>
@@ -169,84 +141,55 @@
 					<table>
 						<thead>
 							<tr>
-								<th>User</th>
-								<th>Date Order</th>
-								<th>Status</th>
+								<th>Producto</th>
+								<th>Precio</th>
+								<th>Estado Stock</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>
-									<img src="../assets/img/saltena.png">
-									<p>John Doe</p>
+								<button type="button" onclick="aumentarSC();" oncontextmenu="disminuirSC();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+
+								<input type='input' id="cantidadSC" value="1">
+								<br>
+								<p>Salteña de Carne</p>
 								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
+								<td>5bs</td>
+								<td><span class="status completed">Stock Alto</span></td>
 							</tr>
+
+
 							<tr>
 								<td>
-								<img src="../assets/img/saltena.png">
-									<p>John Doe</p>
+								<button type="button" onclick="aumentarSP();" oncontextmenu="disminuirSP();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+
+								<input type='input' id="cantidadSP" value="1">
+								<br>
+								<p>Salteña de Pollo</p>
 								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
+								<td>5bs</td>
+								<td><span class="status pending">Stock Bajo</span></td>
 							</tr>
+
+
 							<tr>
 								<td>
-									<img src="../assets/img/saltena.png">
-									<p>John Doe</p>
+									<button type="button" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+
+									<input type='input' id="cantidadMS" value="1">
+									<br>
+									<p>Mini Gaseaso Sprite</p>
 								</td>
-								<td>01-10-2021</td>
-								<td><span class="status process">Process</span></td>
+								<td>2bs</td>
+								<td><span class="status process">Stock Medio</span></td>
 							</tr>
-							<tr>
-								<td>
-									<img src="../assets/img/saltena.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../assets/img/saltena.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
+
+							
 						</tbody>
 					</table>
 				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Todos</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 		</main>
 		<!-- MAIN -->
@@ -254,6 +197,10 @@
 	<!-- CONTENT -->
 	
 
+	
+	
+
+	<script src="../assets/js/buttons.js"></script>
 	<script src="../assets/js/dashboard.js"></script>
 </body>
 </html>
