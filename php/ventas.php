@@ -9,7 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../assets/css/cssDashBoard/style.css">
 	<link rel="stylesheet" href="../assets/css/cssDashBoard/mods.css">
-
+	<link rel="stylesheet" href="../assets/css/cssDashBoard/ventas.css">
 	<title>AdminHub</title>
 </head>
 <body>
