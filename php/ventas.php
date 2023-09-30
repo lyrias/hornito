@@ -98,7 +98,7 @@
 						<tbody>
 							<tr>
 								<td>
-								<button type="button" onclick="aumentarSC();" oncontextmenu="disminuirSC();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+								<button type="buttonw" onclick="aumentarSC();" oncontextmenu="disminuirSC();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
 
 								<input type='textfield' id="cantidadSC" value="1">
 								<br>
@@ -111,7 +111,7 @@
 
 							<tr>
 								<td>
-								<button type="button" onclick="aumentarSP();" oncontextmenu="disminuirSP();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+								<button type="buttonw" onclick="aumentarSP();" oncontextmenu="disminuirSP();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
 
 								<input type='textfield' id="cantidadSP" value="1">
 								<br>
@@ -124,9 +124,9 @@
 
 							<tr>
 								<td>
-								<button type="button" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
+								<button type="buttonw" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
 
-								<input type='number' id="cantidadMS" value="1">
+								<input type='textfile' id="cantidadMS" value="1">
 								<br>
 								<p>Mini Gaseaso Sprite</p>
 								</td>

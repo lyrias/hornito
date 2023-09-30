@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 
+:root {
+--body-font: "Poppins", sans-serif;
+}
+
 input[type=textfield] {
     width: 75%;
     padding: 16px 32px;
-    font-size: 16px;
+    font-size: 36px;
     margin: 8px 0;
     border: 1px solid rgb(5, 204, 72);
-    border-radius: 1px;
-    text-align: left;
-    color: #790707;
-    background: #030cb6;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    background: #4248c7;
+    font-family: var(--body-font);
   }
-  
+button[type=buttonw]{
+    color: #4248c7;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    object-fit: cover;
+
+  }
