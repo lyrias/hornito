@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+input[type=textfield] {
+    width: 75%;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid rgb(5, 204, 72);
+    border-radius: 1px;
+    text-align: left;
+    color: #790707;
+    background: #030cb6;
+  }
+  
