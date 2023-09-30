@@ -13,7 +13,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="ventas.php">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">My Store</span>
 				</a>
