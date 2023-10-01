@@ -5,7 +5,8 @@
 }
 
 input[type=textfield] {
-    width: 75%;
+    width: 100%;
+    height: 100%;
     padding: 16px 32px;
     font-size: 36px;
     margin: 8px 0;
@@ -19,9 +20,8 @@ input[type=textfield] {
 button[type=buttonw]{
     color: #4248c7;
     background: #4248c7;
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
-    object-fit: cover;
-
+    padding: 16px 32px; 
   }
