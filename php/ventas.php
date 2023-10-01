@@ -126,7 +126,7 @@
 								<td>
 								<button type="buttonw" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/saltena.png" height ="90" width="120" /></button>
 
-								<input type='textfile' id="cantidadMS" value="1">
+								<input type='textfield' id="cantidadMS" value="1">
 								<br>
 								<p>Mini Gaseaso Sprite</p>
 								</td>
