@@ -4,6 +4,8 @@ function aumentarSC(){ // se crean la funcion y se agrega al evento onclick en e
     console.log( "Ejecutando función test() aumentar" );
     var x = document.getElementById('cantidadSC').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
     var z = document.getElementById('total').value+document.getElementById('cantidadSC').value*precio;
+    console.log("esto estaria mostrando",z);
+    console.log(inicio*precio);
 }
 
 function disminuirSC(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
