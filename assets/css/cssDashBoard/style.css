@@ -472,12 +472,6 @@ body {
 	grid-gap: 12px;
 	padding-left: 6px;
 }
-#content main .table-data .order table td img {
-	width: 100%;
-	height: 100%;
-	border-radius: 20px;
-	object-fit: cover;
-}
 #content main .table-data .order table tbody tr:hover {
 	background: var(--grey);
 }
