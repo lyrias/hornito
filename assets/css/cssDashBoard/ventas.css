@@ -21,13 +21,11 @@ button[type=buttonw]{
     color: #4248c7;
     background: #4248c7;
     width: 143px;
-    height: 103px;
-    border-radius: 20px;
-    padding: 16px 32px; 
+    height: 113px;
+    border-radius: 20px; 
   }
 #content main .table-data .order table td img {
     width: 123px;
 	height: 103px;
-	border-radius: 20px;
 	object-fit: cover;
 }
