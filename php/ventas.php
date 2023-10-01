@@ -49,32 +49,19 @@
 				<div class="left">
 					<h1>Modulo Ventas</h1>
 				</div>
-				<a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Descarga Aqui</span>
+				<a href="#" class="btn-download" onclick="total()">
+					<span class="text">COBRAR</span>
 				</a>
 			</div>
 
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>New Order</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Visitors</p>
-					</span>
 				</li>
 				<li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">
-						<input type='textfield' id="total" value="0">
-						<p>Total Sales</p>
+						<input type='totalS' id="total" value="0 Bs">
+						<p>Precio Total</p>
 					</span>
 				</li>
 			</ul>
@@ -98,37 +85,37 @@
 						<tbody>
 							<tr>
 								<td>
-								<button type="buttonw" onclick="aumentarSC();" oncontextmenu="disminuirSC();"> <img src="../assets/img/saltena.png" /></button>
+								<button type="buttonw" onclick="aumentarSC();" oncontextmenu="disminuirSC();"> <img src="../assets/img/saltenacarne.png" /></button>
 
-								<input type='textfield' id="cantidadSC" value="1">
+								<input type='textfield' id="cantidadSC" value="0">
 								<br>
-								<p>Salteña de Carne</p>
+								<p id="texto1">Salteña de Carne</p>
 								</td>
-								<td>5bs</td>
+								<td>6bs</td>
 								<td><span class="status completed">Stock Alto</span></td>
 							</tr>
 
 
 							<tr>
 								<td>
-								<button type="buttonw" onclick="aumentarSP();" oncontextmenu="disminuirSP();"> <img src="../assets/img/saltena.png" /></button>
+								<button type="buttonw" onclick="aumentarSP();" oncontextmenu="disminuirSP();"> <img src="../assets/img/saltenahojaldre.png" /></button>
 
-								<input type='textfield' id="cantidadSP" value="1">
+								<input type='textfield' id="cantidadSP" value="0">
 								<br>
-								<p>Salteña de Pollo</p>
+								<p id="texto2" >Salteña de Hojaldre</p>
 								</td>
-								<td>5bs</td>
+								<td>7bs</td>
 								<td><span class="status pending">Stock Bajo</span></td>
 							</tr>
 
 
 							<tr>
 								<td>
-								<button type="buttonw" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/saltena.png" /></button>
+								<button type="buttonw" onclick="aumentarMS();" oncontextmenu="disminuirMS();"> <img src="../assets/img/minisprite.png" /></button>
 
-								<input type='textfield' id="cantidadMS" value="1">
+								<input type='textfield' id="cantidadMS" value="0">
 								<br>
-								<p>Mini Gaseaso Sprite</p>
+								<p id="texto3">Mini Gaseaso Sprite</p>
 								</td>
 								<td>2bs</td>
 								<td><span class="status process">Stock Medio</span></td>
