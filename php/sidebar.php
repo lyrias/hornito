@@ -15,7 +15,7 @@
 			<li>
 				<a href="ventas.php">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">My Store</span>
+					<span class="text">Ventas</span>
 				</a>
 			</li>
 			<li>
