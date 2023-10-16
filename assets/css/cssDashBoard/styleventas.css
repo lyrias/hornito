@@ -22,8 +22,11 @@
 
 
 body {
+	background-image: url(https://us.123rf.com/450wm/mazzzur/mazzzur1604/mazzzur160400096/57497312-quema-en-el-horno-de-le%C3%B1a-el-fuego.jpg);
+	background-repeat: no-repeat;
+	background-size: 120%;
 	margin: 0;
-	background: linear-gradient(45deg, #d17702, #8f0202);
+	/* background: linear-gradient(45deg, #d17702, #8f0202); */
 	font-family: sans-serif;
 	font-weight: 100;
 }
@@ -82,8 +85,6 @@ tbody {
 
 
 
-.bxs-dollar-circle {
-}
 .table-data, tr, th, td {
 	border: 0.5px solid;
 	border-color: rgb(105, 16, 0);
@@ -123,4 +124,8 @@ td{
 	transition-duration: 0.4s;
 	cursor: pointer;
 	border-radius: 28px;
+}
+[class="buttonw"]{ 
+	background-color: transparent;
+	border: 0px solid;
 }
