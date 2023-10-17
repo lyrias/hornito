@@ -23,7 +23,7 @@
  <body>
     
       <div class="login">
-         <img src="assets/img/login-bg.png"  alt="login image" class="login__img">
+         <img src="assets/img/Fondo_Login.png"  alt="login image" class="login__img">
 
          <form action="php/login_usuario_be.php" method="post" class="login__form">
             <h1 class="login__title">Login</h1>
