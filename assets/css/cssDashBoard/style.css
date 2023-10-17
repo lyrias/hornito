@@ -605,20 +605,8 @@ body {
 }
 
 [class="select"]{ 
-	position: relative;
-  	font-family: Arial;
-}
-[class="select"]:hover{ 
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-[class="select"]:after{ 
-	position: absolute;
-	content: "";
-	top: 14px;
-	right: 10px;
-	width: 0;
-	height: 0;
 	border: 6px solid transparent;
 	border-color: #fff transparent transparent transparent;
+	padding: 1px 1px;
+    font-size: 16px;
 }

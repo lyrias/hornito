@@ -13,6 +13,7 @@
 				</a>
 			</li>
 			<li>
+				<i class='bx bxs-shopping-bag-alt' ></i>
 				<select class="select" name="select" onchange="location =this.value;">
 					<option value="bienvenida" selected><a href="bienvenida.php">Ventas</a></option>
 					<option value="ventas.php"><a href="ventas.php">Venta Rapida</a></option>
