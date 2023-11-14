@@ -79,7 +79,7 @@
 							<td><input type='totalS' id="total" value="0 Bs" class="text"></td>
 							<td><input type='totalS' id="vuelto" value="0 Bs" class="text"></td>
 							<td><button class="btn-proc" onclick="calcular();">CALCULAR</button></td>
-							<td><button class="btn-proc" onclick="total();">COBRAR</button></td>
+							<td><button class="btn-proc" onclick="cobrar();">COBRAR</button></td>
 						</tr>
 					</table>
 				</li>
@@ -113,9 +113,9 @@
 						
 								<td><input class='text' id="cantidad<?php echo $reg['id_producto']; ?>" value="0"></td>
 								
-								<td><span class="status completed"><?php echo $reg['stock']; ?></span></td>
-								
 								<td> <span value="<?php echo $reg['precio']; ?>" id="precio<?php echo $reg['id_producto']; ?>"> <?php echo $reg['precio']; ?> </span></td>
+								
+								<td><span class="status completed"><?php echo $reg['stock']; ?></span></td>
 
 								<td><input type='totalS' id="total<?php echo $reg['id_producto']; ?>" value="0 Bs" class="text"></td>
 							</tr>

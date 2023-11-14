@@ -1,37 +1,33 @@
-var inicio = 0; //se inicializa una variable en 0
-var precio = 5;
 function aumentar(n, z, cat){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
     console.log( "Ejecutando función test() aumentar" );
-    console.log(n);
-    console.log(typeof n);
-    console.log(cat);
-    console.log(typeof cat);
     var x = document.getElementById('cantidad'+cat.toString()).value = parseInt(document.getElementById('cantidad'+cat.toString()).value)+n; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
     console.log(x);
     var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
     console.log(g);
+    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)+parseInt(document.getElementById("total"+cat.toString()).value);
+    console.log(tot);
 }
 
-function disminuir(n, cat){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+function disminuir(n, z, cat){ // se crean la funcion y se agrega al evento oncontextmenu en en la etiqueta button con id disminuir
     console.log( "Ejecutando función test() disminuir" );
     var x = document.getElementById('cantidad'+cat.toString()).value = parseInt(document.getElementById('cantidad'+cat.toString()).value)-n; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
     console.log(x);
-    var g=document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
+    var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
     console.log(g);
+    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)+parseInt(document.getElementById("total"+cat.toString()).value);
+    console.log(tot);
 }
 
 document.oncontextmenu = function(){return false}
 
 function calcular(){
-    document.getElementById("total").value = parseInt(document.getElementById("total4").value)+parseInt(document.getElementById("total5").value)+parseInt(document.getElementById("total6").value);
-    document.getElementById("total").value = document.getElementById("total").value+" Bs";
+    document.getElementById("vuelto").value = parseInt(document.getElementById("efectivo").value)-parseInt(document.getElementById("total").value);
+    document.getElementById("vuelto").value = document.getElementById("vuelto").value+" Bs";
 
 }
 
-function total(){
+function cobrar(){
 
-    document.getElementById("vuelto").value = parseInt(document.getElementById("efectivo").value)-parseInt(document.getElementById("total").value);
-    document.getElementById("vuelto").value = document.getElementById("vuelto").value+" Bs";
     document.getElementById("total").value = 0;
 
     document.getElementById("cantidad4").value = 0;
