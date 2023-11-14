@@ -8,9 +8,7 @@ function aumentar(n, cat){ // se crean la funcion y se agrega al evento onclick 
     console.log(typeof cat);
     var x = document.getElementById('cantidad'+cat.toString()).value = parseInt(document.getElementById('cantidad'+cat.toString()).value)+n; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
     console.log(x);
-    var z = parseInt(document.getElementById('precio'+cat.toString()).value);
-    console.log(z);
-    var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
+    var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*parseInt(document.getElementById('precio'+cat.toString()).value);
     console.log(g);
 }
 
@@ -18,9 +16,7 @@ function disminuir(n, cat){ // se crean la funcion y se agrega al evento onclick
     console.log( "Ejecutando función test() disminuir" );
     var x = document.getElementById('cantidad'+cat.toString()).value = parseInt(document.getElementById('cantidad'+cat.toString()).value)-n; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
     console.log(x);
-    var z = parseInt(document.getElementById('precio'+cat.toString()).value);
-    console.log(z);
-    var g=document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
+    var g=document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*parseInt(document.getElementById('precio'+cat.toString()).value);
     console.log(g);
 }
 
