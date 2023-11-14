@@ -109,7 +109,7 @@
 							?>
 
 							<tr>
-								<td><p id="texto<?php echo $reg['id_producto']; ?>"><?php echo $reg['nombre']; ?></p><button class="buttonw" onclick="aumentar(1, <?php echo $reg['id_producto']; ?>);" oncontextmenu="disminuir(1, <?php echo $reg['id_producto']; ?>);"> <img src="../assets/img/PNG/<?php echo $reg['ruta']; ?>" /></button></td>
+								<td><p id="texto<?php echo $reg['id_producto']; ?>"><?php echo $reg['nombre']; ?></p><button class="buttonw" onclick="aumentar(1,<?php echo $reg['precio']; ?>, <?php echo $reg['id_producto']; ?>);" oncontextmenu="disminuir(1, <?php echo $reg['id_producto']; ?>);"> <img src="../assets/img/PNG/<?php echo $reg['ruta']; ?>" /></button></td>
 						
 								<td><input class='text' id="cantidad<?php echo $reg['id_producto']; ?>" value="0"></td>
 								
