@@ -1,61 +1,23 @@
 var inicio = 0; //se inicializa una variable en 0
 var precio = 5;
-function aumentar4(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
+function aumentar(n, cat){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
     console.log( "Ejecutando función test() aumentar" );
-    var x = document.getElementById('cantidad4').value = parseInt(document.getElementById('cantidad4').value)+1; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-    var z = 6;
+    var x = document.getElementById('cantidad'+cat).value = parseInt(document.getElementById('cantidad'+cat).value)+n; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
+    console.log(x);
+    var z = document.getElementById('precio'+cat).value;
     console.log(z);
-    var g=document.getElementById("total4").value = parseInt(document.getElementById("cantidad4").value)*z;
-
+    var g = document.getElementById("total"+cat).value = parseInt(document.getElementById("cantidad"+cat).value)*z;
+    console.log(g);
 }
 
-function disminuir4(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+function disminuir(n, cat){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
     console.log( "Ejecutando función test() disminuir" );
-    var x = document.getElementById('cantidad4').value = parseInt(document.getElementById('cantidad4').value)-1; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-    var z = 6;
+    var x = document.getElementById('cantidad'+cat).value = parseInt(document.getElementById('cantidad'+cat).value)-n; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+    console.log(x);
+    var z = document.getElementById('precio'+cat).value;
     console.log(z);
-    var g=document.getElementById("total4").value = parseInt(document.getElementById("cantidad4").value)*z;
-
-}
-
-
-var inicio1 = 0; //se inicializa una variable en 0
-function aumentar5(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
-    console.log( "Ejecutando función test() aumentar" );
-    var x = document.getElementById('cantidad5').value = parseInt(document.getElementById('cantidad5').value)+1; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-    var z = 7;
-    console.log(z);
-    document.getElementById("total5").value = parseInt(document.getElementById("cantidad5").value)*z;
-
-}
-
-function disminuir5(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
-    console.log( "Ejecutando función test() disminuir" );
-    var x = document.getElementById('cantidad5').value = parseInt(document.getElementById('cantidad5').value)-1; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-    var z = 7;
-    console.log(z);
-    document.getElementById("total5").value = parseInt(document.getElementById("cantidad5").value)*z;
-
-}
-
-
-var inicio2 = 0; //se inicializa una variable en 0
-function aumentar6(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
-    console.log( "Ejecutando función test() aumentar" );
-    var x = document.getElementById('cantidad6').value = parseInt(document.getElementById('cantidad6').value)+1; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-    var z = 2;
-    console.log(z);
-    document.getElementById("total6").value = parseInt(document.getElementById("cantidad6").value)*z;
-
-}
-
-function disminuir6(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
-    console.log( "Ejecutando función test() disminuir" );
-    var x = document.getElementById('cantidad6').value = parseInt(document.getElementById('cantidad6').value)-1; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-    var z = 2;
-    console.log(z);
-    document.getElementById("total6").value = parseInt(document.getElementById("cantidad6").value)*z;
-
+    var g=document.getElementById("total"+cat).value = parseInt(document.getElementById("cantidad"+cat).value)*z;
+    console.log(g);
 }
 
 document.oncontextmenu = function(){return false}

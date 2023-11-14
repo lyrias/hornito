@@ -109,13 +109,13 @@
 							?>
 
 							<tr>
-								<td><p id="texto<?php echo $reg['id_producto']; ?>"><?php echo $reg['nombre']; ?></p><button class="buttonw" onclick="aumentar<?php echo $reg['id_producto']; ?>();" oncontextmenu="disminuir<?php echo $reg['id_producto']; ?>();"> <img src="../assets/img/PNG/<?php echo $reg['ruta']; ?>" /></button></td>
-
+								<td><p id="texto<?php echo $reg['id_producto']; ?>"><?php echo $reg['nombre']; ?></p><button class="buttonw" onclick="aumentar(1, <?php echo $reg['id_producto']; ?>);" oncontextmenu="disminuir(1, <?php echo $reg['id_producto']; ?>);"> <img src="../assets/img/PNG/<?php echo $reg['ruta']; ?>" /></button></td>
+						
 								<td><input class='text' id="cantidad<?php echo $reg['id_producto']; ?>" value="0"></td>
-
-								<td><?php echo $reg['precio']; ?></td>
-
+								
 								<td><span class="status completed"><?php echo $reg['stock']; ?></span></td>
+								
+								<td> <span value="<?php echo $reg['precio']; ?>" id="precio<?php echo $reg['id_producto']; ?>"> <?php echo $reg['precio']; ?> </span></td>
 
 								<td><input type='totalS' id="total<?php echo $reg['id_producto']; ?>" value="0 Bs" class="text"></td>
 							</tr>
