@@ -4,7 +4,7 @@ function aumentar(n, z, cat){ // se crean la funcion y se agrega al evento oncli
     console.log(x);
     var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
     console.log(g);
-    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)+parseInt(document.getElementById("total"+cat.toString()).value);
+    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)+ n*z;
     console.log(tot);
 }
 
@@ -14,7 +14,7 @@ function disminuir(n, z, cat){ // se crean la funcion y se agrega al evento onco
     console.log(x);
     var g = document.getElementById("total"+cat.toString()).value = parseInt(document.getElementById("cantidad"+cat.toString()).value)*z;
     console.log(g);
-    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)+parseInt(document.getElementById("total"+cat.toString()).value);
+    var tot = document.getElementById("total").value = parseInt(document.getElementById("total").value)- n*z;
     console.log(tot);
 }
 
@@ -22,11 +22,15 @@ document.oncontextmenu = function(){return false}
 
 function calcular(){
     document.getElementById("vuelto").value = parseInt(document.getElementById("efectivo").value)-parseInt(document.getElementById("total").value);
+    document.getElementById("total").value = document.getElementById("total").value+" Bs";
     document.getElementById("vuelto").value = document.getElementById("vuelto").value+" Bs";
 
 }
 
-function cobrar(){
+function cancelar(){
+
+    document.getElementById("efectivo").value = 0;
+    document.getElementById("vuelto").value = 0;
 
     document.getElementById("total").value = 0;
 
@@ -40,3 +44,7 @@ function cobrar(){
     console.log( "se puso en 0 totales" );
     document.getElementById("total").value = document.getElementById("total").value+" Bs";
 }
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
