@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("#tbl").DataTable({
         language: {
-            url: "//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json",
+            url: "//cdn.datatables.net/plug-ins/1.10.modificar/i18n/Spanish.json",
         },
         order: [
             [0, "desc"]
@@ -190,7 +190,7 @@ $(document).ready(function() {
             },
             success: function(response) {
                 const datos = JSON.parse(response);
-                $("#codigo").val(datos.codigo);
+               // $("#codigo").val(datos.codigo);
                 $("#producto").val(datos.descripcion);
                 $("#precio").val(datos.precio);
                 $("#cantidad").val(datos.existencia);

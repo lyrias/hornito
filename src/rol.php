@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                 Permisos Asignados
             </div>';
+            
     }else{
         $alert = $alert = '
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -44,8 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Permisos Retirados
             </div>';
         mysqli_query($conexion, "DELETE FROM detalle_permisos WHERE id_usuario = $id_user");
+        
     }
-
+    
 }
 
 

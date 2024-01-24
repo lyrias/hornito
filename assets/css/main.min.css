@@ -861,16 +861,16 @@ h6 {
 }
 
 .app-sidebar .logo .logo-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
     background: url(../images/logo.png) no-repeat;
     background-position: center left;
-    background-size: 50px;
+    background-size: 40px;
     display: block;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 30px;
     float: left;
     padding-left: 45px;
     line-height: 40px;
@@ -880,10 +880,10 @@ h6 {
     transition: all .2s ease-in-out
 }
 
-.app-sidebar .logo .logo-icon {
+.app-sidebar .logo .logo-icon:hover {
     padding-left: 55px
 }
-
+/*.app-sidebar .logo .logo-icon:hover .logo-text {*/
 .app-sidebar .logo .logo-icon .logo-text {
     visibility: visible;
     opacity: 1
@@ -6541,13 +6541,13 @@ span.flatpickr-weekday {
 }
 
 .app-auth-sign-up .app-auth-background {
-    background: url(../images/backgrounds/logo_2.svg) no-repeat;
+    background: url(../images/backgrounds/sign-up.svg) no-repeat;
     background-size: 60%;
     background-position: center
 }
 
 .app-auth-lock-screen .app-auth-background {
-    background: url(../images/backgrounds/logo_2.svg) no-repeat;
+    background: url(../images/backgrounds/lock-screen.svg) no-repeat;
     background-size: 60%;
     background-position: center
 }
@@ -6556,7 +6556,7 @@ span.flatpickr-weekday {
     display: flex;
     padding-left: 70px;
     background: url(../images/logo.png) no-repeat;
-    height: 80px;
+    height: 50px;
     background-size: 50px;
     align-items: center;
     text-decoration: none;
