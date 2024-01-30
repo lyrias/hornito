@@ -190,13 +190,13 @@ $(document).ready(function() {
             },
             success: function(response) {
                 const datos = JSON.parse(response);
-               // $("#codigo").val(datos.codigo);
+                //$("#codigo").val(datos.codproducto);
                 $("#producto").val(datos.descripcion);
                 $("#precio").val(datos.precio);
                 $("#cantidad").val(datos.existencia);
                 $("#id").val(datos.codproducto);
                 $("#btnAccion").val("Modificar");
-                $("#title").html("MODIFICAR PRODUCTO");
+                $("#title").html("MODIFICAR PRODUCTsO");
                 $("#modalFormulario").modal("show");
             },
             error: function(error) {

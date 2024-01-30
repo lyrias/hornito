@@ -13,11 +13,10 @@ if (!empty($_POST)) {
     $alert = "";
     $mensaje = "";
     $id = $_POST['id'];
-    $codigo = $_POST['codigo'];
     $producto = $_POST['producto'];
     $precio = $_POST['precio'];
     $cantidad = $_POST['cantidad'];
-    if (empty($codigo) || empty($producto) || empty($precio) || $precio <  0 || empty($cantidad) || $cantidad <  0) {
+    if (empty($producto) || empty($precio) || $precio <  0 || empty($cantidad) || $cantidad <  0) {
         $mensaje = 'Todo los campos son obligatorios';
         $alert = 'danger';
     } else {
@@ -38,7 +37,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad WHERE codproducto = $id");
+            $query_update = mysqli_query($conexion, "UPDATE producto SET  descripcion = '$producto', precio= $precio, existencia = $cantidad WHERE codproducto = $id");
             if ($query_update) {
                 $mensaje = 'Producto Modificado';
                 $alert = 'success';
@@ -51,7 +50,7 @@ if (!empty($_POST)) {
 }
 include_once "includes/header.php";
 ?>
-<button class="btn btn-primary mb-2" id="nuevoRegistro">Nuevo Producto</button>
+<button onclick="abrirCrearProducto()" class="btn btn-primary mb-2" >Nuevo Producto</button>
 
 <div class="card">
     <div class="card-body">
@@ -66,7 +65,6 @@ include_once "includes/header.php";
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
-                            <th>Código</th>
                             <th>Producto</th>
                             <th>Precio</th>
                             <th>Stock</th>
@@ -83,16 +81,14 @@ include_once "includes/header.php";
                             while ($data = mysqli_fetch_assoc($query)) { ?>
                                 <tr>
                                     <td><?php echo $data['codproducto']; ?></td>
-                                    <td><?php echo $data['codigo']; ?></td>
                                     <td><?php echo $data['descripcion']; ?></td>
                                     <td><?php echo $data['precio']; ?></td>
                                     <td><?php echo $data['existencia']; ?></td>
                                     <td>
-                                        <a href="#" id="<?php echo $data['codproducto']; ?>" class="btn btn-primary editarProducto"><i class='fas fa-edit'></i></a>
-
-                                        <form action="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>" method="post" class="confirmar d-inline">
-                                            <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i> </button>
-                                        </form>
+                                            <a href="editar_productos.php?id=<?php echo $data['codproducto']; ?>" class="btn btn-primary margin-0"><i class='fas fa-edit'></i></a>
+                                            <form action="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>" method="post" class="confirmar d-inline">
+                                                <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i> </button>
+                                            </form>
                                     </td>
                                 </tr>
                         <?php }
@@ -105,40 +101,5 @@ include_once "includes/header.php";
     </div>
 </div>
 
-<div id="modalFormulario" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="title"></h5>
-                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="" method="post" autocomplete="off" id="formulario">
-                    <div class="form-group mb-2">
-                        <label for="codigo" class="font-weight-bold"><i class="fas fa-barcode"></i> Código de Barras</label>
-                        <input type="text" placeholder="Ingrese código de barras" name="codigo" id="codigo" class="form-control">
-                        <input type="hidden" id="id" name="id">
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="producto" class="font-weight-bold">Producto</label>
-                        <input type="text" placeholder="Ingrese nombre del producto" name="producto" id="producto" class="form-control">
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="precio" class="font-weight-bold">Precio</label>
-                        <input type="text" placeholder="Ingrese precio" class="form-control" name="precio" id="precio">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="cantidad" class="font-weight-bold">Cantidad</label>
-                        <input type="number" placeholder="Ingrese cantidad" class="form-control" name="cantidad" id="cantidad">
-                    </div>
-                    <div class="float-end">
-                        <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion">
-                        <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 <?php include_once "includes/footer.php"; ?>

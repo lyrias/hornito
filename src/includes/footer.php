@@ -43,11 +43,15 @@
 <script src="../assets/js/custom.js"></script>
 <script src="../assets/plugins/datatables/datatables.min.js"></script>
 <script src="../assets/js/jquery-ui.min.js"></script>
-<script src="../assets/js/sweetalert2.all.min.js"></script>
+
 <script src="../assets/js/script.js"></script>
 <script src="../assets/plugins/chartjs/chart.bundle.min.js"></script>
 <script src="../assets/js/pages/dashboard.js"></script>
-<script src="../assets/js/scripts_new.js"></script>
+<!-- nuevas funciones agredadas para mayor legibilidad del codigo fuente -->
+
+
+
+<script src="../assets/js/funciones.js"></script>
 </body>
 
 </html>
